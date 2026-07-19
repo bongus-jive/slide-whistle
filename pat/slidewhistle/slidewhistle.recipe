@@ -1,0 +1,7 @@
+{
+  "input": [
+    { "item": "winningticket", "count": 300000 }
+  ],
+  "output": { "item": "pat_slidewhistle" },
+  "groups": [ "beakeasy" ]
+}

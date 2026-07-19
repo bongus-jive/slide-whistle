@@ -1,0 +1,30 @@
+{
+  "itemName": "pat_slidewhistle",
+  "shortdescription": "Slide Whistle",
+  "description": "",
+  "category": "musicalInstrument",
+  "rarity": "Common",
+  "tooltipKind": "tool",
+  "price": 3000,
+  "maxStack": 1,
+  "inventoryIcon": "icon.png",
+  "largeImage": "slidewhistle2.png",
+  "activeImage": "slidewhistle2.png",
+  "image": "slidewhistle.png",
+  "activeAngle": 10,
+  "activeHandPosition": [ 0.25, 0 ],
+  "handPosition": [ 0.25, 0 ],
+  "twoHanded": true,
+  "kind": "ocarina",
+
+  "builder": "/pat/slidewhistle/build.lua",
+  "colorOptions": [
+    "?replace;ffca8a=f4988c;e0975c=d93a3a;a85636=932625",
+    "?replace;ffca8a=ffd495;e0975c=ea9931;a85636=af4e00",
+    "?replace;ffca8a=ffffa7;e0975c=e2c344;a85636=a46e06",
+    "?replace;ffca8a=b2e89d;e0975c=51bd3b;a85636=247824",
+    "?replace;ffca8a=96cbe7;e0975c=5588d4;a85636=344495",
+    "?replace;ffca8a=d29ce7;e0975c=a451c4;a85636=6a2284",
+    "?replace;ffca8a=eab3db;e0975c=d35eae;a85636=97276d"
+  ]
+}
