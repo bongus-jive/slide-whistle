@@ -8,9 +8,8 @@ function build(directory, config, params, level, seed)
   local option = config.colorOptions[(params.colorIndex % count) + 1]
   if option then
     config.inventoryIcon = config.inventoryIcon .. option
-    config.activeImage = config.activeImage .. option
     config.largeImage = config.largeImage .. option
-    config.image = config.image .. option
+    config.paletteSwap = option
   end
 
   return config, params

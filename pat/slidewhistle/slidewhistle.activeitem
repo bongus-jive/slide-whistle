@@ -8,8 +8,8 @@
   "price": 3000,
   "maxStack": 1,
   "twoHanded": true,
-  "inventoryIcon": "icon.png",
-  "largeImage": "slidewhistle2.png",
+  "inventoryIcon": "images/icon.png",
+  "largeImage": "images/large.png",
 
   "animationParts": {
     "whistle": "images/whistle.png",
@@ -31,7 +31,7 @@
     "rotation"
   ],
 
-  "builder": "/pat/slidewhistle/build.lua",
+  "builder": "/pat/slidewhistle/scripts/build.lua",
   "colorOptions": [
     "?replace;ffca8a=f4988c;e0975c=d93a3a;a85636=932625",
     "?replace;ffca8a=ffd495;e0975c=ea9931;a85636=af4e00",
