@@ -12,5 +12,9 @@ function build(directory, config, params, level, seed)
     config.paletteSwap = option
   end
 
+  local label = root.assetJson("/items/categories.config:labels")[config.category]
+  config.tooltipFields = config.tooltipFields or {}
+  config.tooltipFields.toolLabel = label or config.category
+
   return config, params
 end
