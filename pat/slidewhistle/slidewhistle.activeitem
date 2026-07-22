@@ -7,15 +7,29 @@
   "tooltipKind": "tool",
   "price": 3000,
   "maxStack": 1,
+  "twoHanded": true,
   "inventoryIcon": "icon.png",
   "largeImage": "slidewhistle2.png",
-  "activeImage": "slidewhistle2.png",
-  "image": "slidewhistle.png",
-  "activeAngle": 10,
-  "activeHandPosition": [ 0.25, 0 ],
-  "handPosition": [ 0.25, 0 ],
-  "twoHanded": true,
-  "kind": "ocarina",
+
+  "animationParts": {
+    "whistle": "images/whistle.png",
+    "slide": "images/slide.png"
+  },
+  "animation": "slidewhistle.animation",
+  
+  "scripts": [ "scripts/slidewhistle.lua" ],
+  "armAngle": 6,
+  "whistleAngle": -12,
+  "frontArmFrame": "run.1",
+  "backArmFrames": [
+    "rotation?crop=5;0;43;43",
+    "rotation?crop=4;0;43;43",
+    "rotation?crop=3;0;43;43",
+    "rotation?crop=2;0;43;43",
+    "rotation?crop=1;0;43;43",
+    "rotation",
+    "rotation"
+  ],
 
   "builder": "/pat/slidewhistle/build.lua",
   "colorOptions": [

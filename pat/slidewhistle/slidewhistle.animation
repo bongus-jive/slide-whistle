@@ -1,0 +1,38 @@
+{
+  "globalTagDefaults": {
+    "paletteSwaps": ""
+  },
+
+  "transformationGroups": {
+    "whistle": { },
+    "slide": { }
+  },
+
+  "animatedParts": {
+    "parts": {
+      "whistle": {
+        "properties": {
+          "centered": true,
+          "offset": [ -0.1875, 0 ],
+          "image": "<partImage><paletteSwaps>",
+          "transformationGroups": [ "whistle" ]
+        }
+      },
+      "slide": {
+        "properties": {
+          "centered": true,
+          "offset": [ -0.25, 0 ],
+          "image": "<partImage><paletteSwaps>",
+          "slideOffset": 0.625,
+          "transformationGroups": [ "slide", "whistle" ]
+        }
+      }
+    }
+  },
+
+  "sounds": {
+    "whistle": {
+      "pool": [ "/pat/slidewhistle/sfx/whistle.ogg" ]
+    }
+  }
+}
