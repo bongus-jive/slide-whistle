@@ -30,6 +30,17 @@
     }
   },
 
+  "particleEmitters": {
+    "music": {
+      "active": false,
+      "emissionRate": 1,
+      "emissionRateVariance": 0.5,
+      "particles": [
+        { "particle": "music", "offset": [ -1, -1 ] }
+      ]
+    }
+  },
+
   "sounds": {
     "whistle": {
       "pool": [ "/pat/slidewhistle/sfx/whistle.ogg" ]

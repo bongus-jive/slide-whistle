@@ -25,6 +25,7 @@ function update(dt, fireMode)
   local firing = fireMode ~= "none"
   WhistleSound:update(firing)
   activeItem.setRecoil(firing)
+  animator.setParticleEmitterActive("music", firing)
 
   local aimPos = activeItem.ownerAimPosition()
   local aimAngle, aimDir = activeItem.aimAngleAndDirection(0, aimPos)
