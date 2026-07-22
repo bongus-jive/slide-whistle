@@ -18,6 +18,7 @@
   "animation": "slidewhistle.animation",
   
   "scripts": [ "scripts/slidewhistle.lua" ],
+  "pitchRange": [ 0.5, 1.25 ],
   "armAngle": 6,
   "whistleAngle": -12,
   "frontArmFrame": "run.1",

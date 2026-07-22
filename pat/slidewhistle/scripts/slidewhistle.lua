@@ -7,6 +7,7 @@ function init()
   WhistleSound = SoundPlayer:new("whistle", 0.2)
 
   SlideOffset = animator.partProperty("slide", "slideOffset")
+  PitchRange = config.getParameter("pitchRange")
   BackArmFrames = config.getParameter("backArmFrames", {})
 
   activeItem.setBackArmFrame(BackArmFrames[1])
@@ -44,15 +45,14 @@ function update(dt, fireMode)
   local dist = world.magnitude(center, aimPos) - m
   local percent = math.min(1, math.max(0, dist / edge))
 
-  local pitch = interp.linear(percent, 0.5, 1.25)
+  local pitch = interp.linear(percent, PitchRange[1], PitchRange[2])
   WhistleSound:setPitch(pitch)
-  
+
   local backArm = math.floor(percent * #BackArmFrames) + 1
   activeItem.setBackArmFrame(BackArmFrames[backArm])
 
   animator.resetTransformationGroup("slide")
   animator.translateTransformationGroup("slide", {SlideOffset * percent // 0.0625 * 0.0625, 0})
-  world.debugText("%s", percent, aimPos, "green")
 end
 
 function distanceToEdge(w, h, a)
