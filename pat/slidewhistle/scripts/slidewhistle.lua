@@ -27,10 +27,10 @@ function update(dt, fireMode)
   activeItem.setRecoil(firing)
 
   local aimPos = activeItem.ownerAimPosition()
-  if self.aimPos then
-    aimPos = vec2.lerp(0.12, self.aimPos, aimPos)
+  if LastAimPos then
+    aimPos = vec2.lerp(0.12, LastAimPos, aimPos)
   end
-  self.aimPos = aimPos
+  LastAimPos = aimPos
 
   local aimAngle, aimDir = activeItem.aimAngleAndDirection(0, aimPos)
   activeItem.setFacingDirection(aimDir)
