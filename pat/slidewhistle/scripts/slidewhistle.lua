@@ -48,6 +48,25 @@ function update(dt, fireMode)
 
   animator.resetTransformationGroup("slide")
   animator.translateTransformationGroup("slide", {SlideOffset * percent // 0.0625 * 0.0625, 0})
+
+  if firing and LastPercent then
+    local diff = math.abs(LastPercent - percent)
+    consumeDurability(diff)
+  end
+  LastPercent = percent
+end
+
+function consumeDurability(d)
+  if d <= 0 then return end
+
+  local durability = config.getParameter("durabilityHit") or config.getParameter("durability")
+  durability = durability - d
+  if durability < 0 then
+    activeItem.setInstanceValue("durabilityHit", nil)
+    item.consume(1)
+    return
+  end
+  activeItem.setInstanceValue("durabilityHit", durability)
 end
 
 function distanceToEdge(w, h, a)

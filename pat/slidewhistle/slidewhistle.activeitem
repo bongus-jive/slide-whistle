@@ -16,7 +16,9 @@
     "slide": "images/slide.png"
   },
   "animation": "slidewhistle.animation",
-  
+
+  "durability": 500,
+
   "scripts": [ "scripts/slidewhistle.lua" ],
   "pitchRange": [ 0.5, 1.25 ],
   "armAngle": 6,
