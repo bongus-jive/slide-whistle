@@ -4,20 +4,20 @@ require "/scripts/vec2.lua"
 require "/scripts/interp.lua"
 
 function init()
-  if not world.clientWindow then script.setUpdateDelta(0) end
-
-  animator.setGlobalTag("paletteSwaps", config.getParameter("paletteSwap", ""))
-
   WhistleSound = SoundPlayer:new("whistle", 0.2)
 
   SlideOffset = animator.partProperty("slide", "slideOffset")
   BackArmFrames = config.getParameter("backArmFrames", {})
-  activeItem.setFrontArmFrame(config.getParameter("frontArmFrame"))
+
   activeItem.setBackArmFrame(BackArmFrames[1])
+  activeItem.setFrontArmFrame(config.getParameter("frontArmFrame"))
   activeItem.setArmAngle(math.rad(config.getParameter("armAngle", 0)))
 
   animator.resetTransformationGroup("whistle")
   animator.rotateTransformationGroup("whistle", math.rad(config.getParameter("whistleAngle", 0)))
+  animator.setGlobalTag("paletteSwaps", config.getParameter("paletteSwap", ""))
+
+  if not world.clientWindow then script.setUpdateDelta(0) end
 end
 
 function update(dt, fireMode)
