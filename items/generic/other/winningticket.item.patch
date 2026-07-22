@@ -5,6 +5,6 @@
   ],
   [
     { "op": "add", "path": "/learnBlueprintsOnPickup/-", "value": "pat_slidewhistle" },
-    { "op": "add", "path": "/maxCount", "value": 10000 }
+    { "op": "add", "path": "/maxStack", "value": 10000 }
   ]
 ]
